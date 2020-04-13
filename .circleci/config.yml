@@ -26,9 +26,9 @@ jobs:
             flake8 --exclude=venv* --statistics
             pytest -v --cov=calculator
 
-      # Step 4: run app
+      # Step 4: behave test
       - run:
-          name: run app
+          name: behave test
           command: |
             . venv/bin/activate
-            python calculator.py
+            behave
